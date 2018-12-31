@@ -11,7 +11,8 @@ export default class Headitem extends Component {
                     </View>
                 </View>
                 <View style={styles.rightStyle}>
-                    <Text style={styles.rightFonts}>جلسه اول</Text>
+                    <Text style={styles.rightFonts}>آموزش</Text>
+                    <Text style={styles.rightFonts}>جلسه چهارم</Text>
                 </View>
             </View>
         );
