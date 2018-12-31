@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 export default class Sidebar extends Component {
     render() {
@@ -28,9 +28,11 @@ export default class Sidebar extends Component {
                             </Text>
                         </View>
                         <View style={styles.noficationPanelButton}>
-                            <View style={styles.buttonWrapper}>
-                                <Text style={{color: "#eee"}}>برو</Text>
-                            </View>
+                            <TouchableOpacity style={styles.buttonWrapper}>
+                                <View>
+                                    <Text style={{color: "#eee",fontSize:18}}>برو</Text>
+                                </View>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
@@ -99,7 +101,7 @@ const styles = StyleSheet.create({
     sideBar: {
         flex: 0.23,
         borderColor: "steelblue",
-        backgroundColor:'white',
+        backgroundColor: 'white',
         padding: 25,
         paddingTop: 40,
         // paddingLeft:100

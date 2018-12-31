@@ -1,17 +1,21 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default class Headitem extends Component {
     render() {
         return (
             <View style={styles.listItems}>
                 <View style={styles.leftStyle}>
-                    <View style={styles.declineButton}>
-                        <Text style={styles.leftFonts}>لغو</Text>
-                    </View>
+                    <TouchableOpacity>
+                        <View style={styles.declineButton}>
+                            <Text style={styles.leftFonts}>لغو</Text>
+                        </View>
+                    </TouchableOpacity>
+                <TouchableOpacity>
                     <View style={styles.editButton}>
                         <Text style={styles.leftFonts}>ویرایش</Text>
                     </View>
+                </TouchableOpacity>
                 </View>
                 <View style={styles.rightStyle}>
                     <Text style={styles.rightFonts}>۹ الی ۱۲:۳۰</Text>
@@ -24,46 +28,43 @@ export default class Headitem extends Component {
     }
 }
 const styles = StyleSheet.create({
-    leftFonts:{
-        color:'white',
-        fontSize:15
+    leftFonts: {
+        color: 'white',
+        fontSize: 15,
     },
-    rightFonts:{
+    rightFonts: {
         color: 'black',
-        paddingHorizontal: 30,
         fontSize: 17
     },
-    listItems:{
+    listItems: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingHorizontal: 15,
+        alignItems:'center',
         paddingVertical: 10
     },
-    rightStyle:{
+    rightStyle: {
         flexDirection: 'row',
-        // backgroundColor:'green',
-        justifyContent:'flex-end',
-        alignItems:'center',
-        flex:.725
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        flex: .6,
     },
-    leftStyle:{
-        flexDirection:'row',
-        // backgroundColor: 'blue',
+    leftStyle: {
+        flexDirection: 'row',
         justifyContent: 'space-between',
         flex: .175
     },
-    declineButton:{
-        backgroundColor:'#2e3f50',
+    declineButton: {
+        backgroundColor: '#2e3f50',
         width: 75,
         height: 28,
-        justifyContent:'center',
+        justifyContent: 'center',
         alignItems: 'center'
     },
-    editButton:{
-        backgroundColor:'#00afb2',
+    editButton: {
+        backgroundColor: '#00afb2',
         width: 75,
         height: 28,
-        justifyContent:'center',
+        justifyContent: 'center',
         alignItems: 'center',
     }
 });

@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 export default class Headitem extends Component {
     render() {
         return (
             <View style={styles.listItems}>
                 <View style={styles.leftStyle}>
-                    <View style={styles.declineButton}>
-                        <Text style={styles.leftFonts}>رزرو</Text>
-                    </View>
+                    <TouchableOpacity>
+                        <View style={styles.declineButton}>
+                            <Text style={styles.leftFonts}>رزرو</Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.rightStyle}>
                     <Text style={styles.rightFonts}>آموزش</Text>
@@ -19,40 +21,38 @@ export default class Headitem extends Component {
     }
 }
 const styles = StyleSheet.create({
-    leftFonts:{
-        color:'white',
-        fontSize:15
+    leftFonts: {
+        color: 'white',
+        fontSize: 15
     },
-    rightFonts:{
+    rightFonts: {
         color: 'black',
-        paddingHorizontal: 30,
         fontSize: 17
     },
-    listItems:{
+    listItems: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor:'#f3f6fa',
-        paddingHorizontal: 15,
-        paddingVertical: 10
-    
+        backgroundColor: '#f3f6fa',
+        paddingVertical: 10,
+        alignItems:'center'
     },
-    rightStyle:{
+    rightStyle: {
         flexDirection: 'row',
-        justifyContent:'flex-end',
-        alignItems:'center',
-        flex:.725
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        flex: .29,
     },
-    leftStyle:{
-        flexDirection:'row',
+    leftStyle: {
+        flexDirection: 'row',
         justifyContent: 'space-between',
         flex: .175
     },
-    declineButton:{
-        backgroundColor:'#ff795f',
+    declineButton: {
+        backgroundColor: '#ff795f',
         width: 75,
         height: 28,
-        justifyContent:'center',
+        justifyContent: 'center',
         alignItems: 'center'
     },
-
+    
 });
