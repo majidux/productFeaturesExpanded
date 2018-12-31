@@ -53,11 +53,4 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems: 'center'
     },
-    editButton:{
-        backgroundColor:'#00afb2',
-        width: 75,
-        height: 28,
-        justifyContent:'center',
-        alignItems: 'center',
-    }
 });
