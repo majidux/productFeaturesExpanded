@@ -104,7 +104,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         padding: 25,
         paddingTop: 40,
-        // paddingLeft:100
     },
     noficationPanel: {
         flex: 0.3,
